@@ -2,9 +2,9 @@
 
 ## _This project is not in a complete or portfolio ready state, and should not be considered representational of professional work._
 
-# _Application Name_
+# _Currency Exchanger_
 
-#### _Brief description of application_
+#### _A web-based application to convert an amount in U.S. dollars and then choose which currency it should be converted to using today's exchange rate._
 
 #### _By **Jessica R. Williams**_
 
@@ -13,16 +13,18 @@
 1. [Preview](#preview)
 2. [Technologies Used](#technologies)
 3. [Description](#description)
-4. [Setup/Installation Requirements](#setup)
-5. [Additional Setup/Installation Note for Windows Users](#windows)
-6. [Specifications](#specs)
-7. [Known Bugs](#bugs)
-8. [License](#license)
-9. [Contact Information](#contact)
+4. [The Assignment Prompt](#prompt)
+5. [API Key Procurement](#api)
+6. [Setup/Installation Requirements](#setup)
+7. [Additional Setup/Installation Note for Windows Users](#windows)
+8. [Specifications](#specs)
+9. [Known Bugs](#bugs)
+10. [License](#license)
+11. [Contact Information](#contact)
 
 ## Preview <a id="preview"></a>
 
-* _Direct your browser to a [live version](https://jessicarubinwilliams.github.io/project/index.html) on GitHub Pages._
+_Direct your browser to a [live version](https://jessicarubinwilliams.github.io/currency-exchanger) on GitHub Pages._
 
 ## Technologies Used <a id="technologies"></a>
 
@@ -53,6 +55,24 @@
 
 _This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have. Balance between a summary of the project and a tame market pitch._
 
+## The Assignment Prompt <a id="prompt"></a>
+
+_A user should be able to type in an amount (in U.S. dollars) and then choose which currency it should be converted to (such as francs, marks, rupees, and so on)._
+
+* _A user should be able to enter an amount (in U.S. dollars) and then specify another currency (such as the South Korean won). The user should then see the total amount they entered in converted currency._
+* _Users should be able to convert U.S. currency into at least 5 other types of currency._
+* _If the API call results in an error (any message not a 200 OK), the application should return a notification to the user that states what the error is._
+* _If the query response doesn't include that particular currency, the application should return a notification that states the currency in question doesn't exist._
+
+## API Key Procurement <a id="api"></a>
+
+_This application uses the ExchangeRate-API. You will need to make an account and get an API key if you wish to recreate the project environment on your local. The "Free Plan" allows for 2000 API calls per month.
+
+* _Visit the [ExchangeRate-API site](https://www.exchangerate-api.com/)._
+* _Input your email address and click the "Get Free Key" button._
+* _You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use, click "Get Started!" and confirm your email address._
+* _Access your account dashboard that includes your API key as well as your remaining API calls for the month._
+
 ## Setup/Installation Requirements <a id="setup"></a>
 
 * _Open the terminal on your local machine_
@@ -62,6 +82,8 @@ _This is a detailed description of your application. Give as much detail as need
 * _Navigate to the top level of the repository with the command `$ cd project`_
 * _Recreate project environment and install required dependencies with terminal command `$ npm install`_
 * _Create file for storing environmental variables you want to keep secret (such as an API key)`$ touch .env`_
+* _Open the project in your text editor_
+* _Add the following line of code to the .env file `API_KEY=insert-your-API-key-here` where you substitute the API key you got by following the instructions above for the "insert-your-API-key-here". The following is an example using a fake API key: `API_KEY=1234567890`
 * _Create production environment with terminal command `$ npm run build`_
 * _Open project in a development server in the browser of your choice with the command `$ npm run start`_
 * _Lint code with the command `$ npm run lint`_
