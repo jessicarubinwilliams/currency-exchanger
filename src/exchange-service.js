@@ -1,5 +1,5 @@
 export default class ExchangeService {
-  static getExchangeRate(currency) {
+  static getExchangeRate() {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
       const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
@@ -9,7 +9,7 @@ export default class ExchangeService {
         } else {
           reject(request.response);
         }
-      }
+      };
       request.open("GET", url, true);
       request.send();
     });
