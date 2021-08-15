@@ -22,3 +22,19 @@ function clearFields() {
   $('#showErrors').text("");
   $('#showConversion').text("");
 }
+
+const dynamicOutput = (response, conversionCurrency, amount) => {
+  const rate = response.conversion_rates[conversionCurrency];
+  const time = new Date(response.time_last_update_unix * 1000).toLocaleString();
+  let currencyToOutput = "";
+  currencyLibrary.currencies.forEach((currency) => {
+    if (currency.currencyCode === conversionCurrency) {
+      currencyToOutput = currency.currencyName;
+    } else {
+      return;
+    }
+  });
+  const outputDiv = $('#showConversion');
+  let htmlForOutput = `As of ${time}, ${amount} U.S. Dollars is worth ${amount * rate} ${currencyToOutput}.`;
+  outputDiv.html(htmlForOutput);
+};
