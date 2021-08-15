@@ -39,6 +39,18 @@ const dynamicResponseOutput = (response, conversionCurrency, amount) => {
   outputDiv.html(htmlForOutput);
 };
 
+const dynamicErrorOutput = (error) => {
+  const errorDiv = $('#showErrors');
+  console.log(error["error-type"]);
+  let htmlForErrorOutput = "";
+  if (error["error-type"] === "unsupported-code") {
+    htmlForErrorOutput += "There was an error processing your request. The Exchange Rate Application Programming Interface, from which we get exchange rates, doesn't support that currency.</p>";
+  } else {
+    htmlForErrorOutput += "Apologies. There was a technical error on our end and we're not able to access that exchange rate at this time.</p>";
+  }
+  errorDiv.html(htmlForErrorOutput);
+};
+
 createCurrencySelectBox();  
 $('#userInput').submit(function() {
   event.preventDefault();
@@ -50,6 +62,7 @@ $('#userInput').submit(function() {
     const apiResponse = JSON.parse(response);
     dynamicResponseOutput(apiResponse, conversionCurrency, amtToConvert);
   }, function(error) {
-    $('#showErrors').text(`There was an error processing your request: ${error}`);
+    const apiError = JSON. parse(error);
+    dynamicErrorOutput(apiError);
   });
 });
