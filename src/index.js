@@ -23,7 +23,7 @@ function clearFields() {
   $('#showConversion').text("");
 }
 
-const dynamicOutput = (response, conversionCurrency, amount) => {
+const dynamicResponseOutput = (response, conversionCurrency, amount) => {
   const rate = response.conversion_rates[conversionCurrency];
   const time = new Date(response.time_last_update_unix * 1000).toLocaleString();
   let currencyToOutput = "";
@@ -48,7 +48,7 @@ $('#userInput').submit(function() {
   let promise = ExchangeService.getExchangeRate();
   promise.then(function(response) {
     const apiResponse = JSON.parse(response);
-    dynamicOutput(apiResponse, conversionCurrency, amtToConvert);
+    dynamicResponseOutput(apiResponse, conversionCurrency, amtToConvert);
   }, function(error) {
     $('#showErrors').text(`There was an error processing your request: ${error}`);
   });
