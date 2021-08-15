@@ -15,3 +15,10 @@ function createCurrencySelectBox() {
   });
   idToAppend.append(htmlForSelectBox);
 }
+
+function clearFields() {
+  $('#amountToConvert').val("");
+  $('#currency').val("");
+  $('#showErrors').text("");
+  $('#showConversion').text("");
+}
