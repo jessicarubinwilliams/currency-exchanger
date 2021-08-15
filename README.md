@@ -98,7 +98,7 @@ _This environment was created on a Mac. For it to work properly in your local en
 
 ## Known Bugs <a id="bugs"></a>
 * _There are no validation checks on the user's input_
-* _There is inelegant error handling. The error message should be better parsed before display_
+* _There is no CSS styling_
 
 ## License <a id="license"></a>
 *[MIT](https://choosealicense.com/licenses/mit/)*
