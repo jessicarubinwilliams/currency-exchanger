@@ -38,3 +38,18 @@ const dynamicOutput = (response, conversionCurrency, amount) => {
   let htmlForOutput = `As of ${time}, ${amount} U.S. Dollars is worth ${amount * rate} ${currencyToOutput}.`;
   outputDiv.html(htmlForOutput);
 };
+
+createCurrencySelectBox();  
+$('#userInput').submit(function() {
+  event.preventDefault();
+  const conversionCurrency = $('#currency').val();
+  const amtToConvert = parseInt($('#amountToConvert').val());
+  clearFields();
+  let promise = ExchangeService.getExchangeRate();
+  promise.then(function(response) {
+    const apiResponse = JSON.parse(response);
+    dynamicOutput(apiResponse, conversionCurrency, amtToConvert);
+  }, function(error) {
+    $('#showErrors').text(`There was an error processing your request: ${error}`);
+  });
+});
