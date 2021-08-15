@@ -62,7 +62,7 @@ $('#userInput').submit(function() {
     const apiResponse = JSON.parse(response);
     dynamicResponseOutput(apiResponse, conversionCurrency, amtToConvert);
   }, function(error) {
-    const apiError = JSON. parse(error);
+    const apiError = JSON.parse(error);
     dynamicErrorOutput(apiError);
   });
 });
