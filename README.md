@@ -1,10 +1,6 @@
-## _THIS PROJECT IS AN ENVIRONMENT TEMPLATE FOR FUTURE PROJECTS_
-
-## _This project is not in a complete or portfolio ready state, and should not be considered representational of professional work._
-
 # _Currency Exchanger_
 
-#### _A web-based application to convert an amount in U.S. dollars and then choose which currency it should be converted to using today's exchange rate._
+#### _A web-based application to convert an amount in U.S. dollars to the currency of the user's choice._
 
 #### _By **Jessica R. Williams**_
 
@@ -53,7 +49,7 @@ _Direct your browser to a [live version](https://jessicarubinwilliams.github.io/
 
 ## Description <a id="description"></a>
 
-_This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have. Balance between a summary of the project and a tame market pitch._
+_This is a web-based application to convert U.S. Dollars to the currency of the user's choice. The user enters an amount of U.S. currency and then selects a currency to convert to from a drop down box of the 160 commonly circulating world currencies. Once the user clicks the submit button the application interacts with the ExchangeRate-API to get the current days exchange rate. If the API call is successful the application displays the converted amount. If the API call is not successful the application displays the error message from the API._
 
 ## The Assignment Prompt <a id="prompt"></a>
 
@@ -101,8 +97,8 @@ _This environment was created on a Mac. For it to work properly in your local en
 | The program should handle... | When it receives... | It should return... |
 
 ## Known Bugs <a id="bugs"></a>
-* _Any known issues_
-* _should go here_
+* _There are no validation checks on the user's input_
+* _There is inelegant error handling. The error message should be better parsed before display_
 
 ## License <a id="license"></a>
 *[MIT](https://choosealicense.com/licenses/mit/)*
