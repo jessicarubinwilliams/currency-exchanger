@@ -44,9 +44,9 @@ const dynamicErrorOutput = (error) => {
   console.log(error["error-type"]);
   let htmlForErrorOutput = "";
   if (error["error-type"] === "unsupported-code") {
-    htmlForErrorOutput += "There was an error processing your request. The Exchange Rate Application Programming Interface, from which we get exchange rates, doesn't support that currency.</p>";
+    htmlForErrorOutput += `There was an error processing your request. The Exchange Rate Application Programming Interface, from which we get exchange rates, doesn't support that currency. Here's the exact error message from the API: "${error["error-type"]}"</p>`;
   } else {
-    htmlForErrorOutput += "Apologies. There was a technical error on our end and we're not able to access that exchange rate at this time.</p>";
+    htmlForErrorOutput += `Apologies. There was a technical error on our end and we're not able to access that exchange rate at this time. Here's the exact error message from the API: "${error["error-type"]}"</p>`;
   }
   errorDiv.html(htmlForErrorOutput);
 };
