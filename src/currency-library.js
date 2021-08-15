@@ -799,4 +799,4 @@ export const currencyLibrary = {
     currencyName: "Zambian Kwacha",
     country: "Zambia"
   }
-]}
+  ]};
