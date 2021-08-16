@@ -13,10 +13,9 @@
 5. [API Key Procurement](#api)
 6. [Setup/Installation Requirements](#setup)
 7. [Additional Setup/Installation Note for Windows Users](#windows)
-8. [Specifications](#specs)
-9. [Known Bugs](#bugs)
-10. [License](#license)
-11. [Contact Information](#contact)
+8. [Known Bugs](#bugs)
+9. [License](#license)
+10. [Contact Information](#contact)
 
 ## Preview <a id="preview"></a>
 
@@ -89,12 +88,6 @@ _This application uses the ExchangeRate-API. You will need to make an account an
 
 _This environment was created on a Mac. For it to work properly in your local environment make the following change:_
 * _Update package.json, line 8 to: `"start": "npm run build & webpack-dev-server --open --mode development",`_
-
-## Specifications <a id="specs"></a>
-
-| Behavior | Input | Output |
-|:---:|:---:|:---:|
-| The program should handle... | When it receives... | It should return... |
 
 ## Known Bugs <a id="bugs"></a>
 * _There are no validation checks on the user's input_
