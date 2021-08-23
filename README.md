@@ -78,7 +78,7 @@ _This application uses the ExchangeRate-API. You will need to make an account an
 * _Recreate project environment and install required dependencies with terminal command `$ npm install`_
 * _Create file for storing environmental variables you want to keep secret (such as an API key)`$ touch .env`_
 * _Open the project in your text editor_
-* _Add the following line of code to the .env file `API_KEY=insert-your-API-key-here` where you substitute the API key you got by following the instructions above for the "insert-your-API-key-here". The following is an example using a fake API key: `API_KEY=1234567890`
+* _Add the following line of code to the .env file `API_KEY=insert-your-API-key-here` where you substitute the API key you got by following the instructions above for the "insert-your-API-key-here". The following is an example using a fake API key: `API_KEY=1234567890`_
 * _Create production environment with terminal command `$ npm run build`_
 * _Open project in a development server in the browser of your choice with the command `$ npm run start`_
 * _Lint code with the command `$ npm run lint`_
