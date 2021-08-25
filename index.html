@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Currency Exchanger</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Convert the U.S. Dollar</h1>
+    <h3>Get today's conversation rate between the U.S. dollar and all 160 commonly circulating world currencies</h3>
+    <form id="userInput">
+      <div class="form-group">
+        <label for="amountToConvert">Enter value in U.S. Dollars to convert: </label>
+        <input id="amountToConvert" class="form-control"  type="text">
+      </div>
+      <div class="form-group">
+        <label for="currency">Select currency to which to convert:</label>
+        <select id="currency" class="form-control">
+        </select>
+      </div>
+      <button type="submit" class="btn btn-info">Get currency conversion</button>
+    </form>
+    <div id="showErrors"></div>
+    <div id="showConversion"></div>
+  </div>
+<script type="text/javascript" src="/currency-exchanger/bundle.js"></script></body>
+</html>
